@@ -5,4 +5,4 @@ A small Python console Student Task Manager.
 ## Run
 
     python app.py
-Project status: In Development
+Project status: In Development and Testing
