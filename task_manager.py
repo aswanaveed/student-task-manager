@@ -35,7 +35,7 @@ class TaskManager:
     # --- complete ------------------------------------------------
     def complete_task(self, task_id):
         task = self._find(task_id)
-        task.completed = True
+        task.completed = False
         return task
 
     # --- delete --------------------------------------------------
