@@ -35,4 +35,6 @@ class TaskManager:
 
     # --- delete --------------------------------------------------
     def delete_task(self, task_id):
-        raise NotImplementedError("delete_task is not implemented yet")
+        task = self._find(task_id)
+        self._tasks.remove(task)
+        return task
