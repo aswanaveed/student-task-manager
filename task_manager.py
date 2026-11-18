@@ -31,7 +31,9 @@ class TaskManager:
 
     # --- complete ------------------------------------------------
     def complete_task(self, task_id):
-        raise NotImplementedError("complete_task is not implemented yet")
+        task = self._find(task_id)
+        task.completed = True
+        return task
 
     # --- delete --------------------------------------------------
     def delete_task(self, task_id):
