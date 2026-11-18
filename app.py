@@ -25,8 +25,15 @@ def handle_add(manager):
 
 
 def handle_complete(manager):
-    task_id = int(input("Task id to complete: "))
-    manager.complete_task(task_id)
+    raw = input("Task id to complete: ").strip()
+    if not raw.isdigit():
+        print("Error: task id must be a number.")
+        return
+    try:
+        manager.complete_task(int(raw))
+    except ValueError as error:
+        print(f"Error: {error}")
+        return
     print("Task marked as completed.")
 
 
